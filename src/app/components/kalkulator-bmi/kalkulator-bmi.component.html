@@ -1,0 +1,28 @@
+
+    <h2>Kalkulator BMI</h2>
+    <div class="leftContentBMI">
+        <table class="leftBMI">
+            <tr>
+                <td colspan="3">Oblicz swój wskaźnik <b>BMI</b></td>
+            </tr>
+            <tr>
+                <td class="leftTableBMI">Waga:</td>
+                <td><input type="number" [(ngModel)]="weight"></td>
+                <td>kg</td>
+            </tr>
+            <tr>
+                <td class="leftTableBMI">Wzrost:</td>
+                <td><input type="number" [(ngModel)]="height"></td>
+                <td>cm</td>
+            </tr>
+            <tr>
+                <td colspan="3"><button (click)="resetValuesInputs()" class="reset">Resetuj</button><button (click)="checkWeightAndHeight()" class="calculate">Oblicz</button></td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="showResults" class="rightContentBMI">
+        <p style="font-size: 30px">Twój wskaźnik masy ciała wynosi:</p>
+        <p class="numberBMI">{{resultNumber}}</p>
+        <br><p style="font-size: 25px">Twoje BMI wskazuje na:</p>
+        <p calss="textBMI">{{resultText}}</p>
+    </div>
