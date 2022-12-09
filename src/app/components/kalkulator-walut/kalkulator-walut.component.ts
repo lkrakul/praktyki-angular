@@ -17,10 +17,6 @@ export class KalkulatorWalutComponent {
 
   }
 
-  public calculate() {
-    console.log(this.fromCurrency)
-  }
-
   public convertCurrency() {
     this.currencyService.convertCurrency(this.fromCurrency, this.toCurrency).subscribe(response => {
       let total = this.amountMoney * response.result
