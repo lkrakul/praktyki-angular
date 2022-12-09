@@ -11,7 +11,7 @@ export class KalkulatorBmiComponent {
     public resultNumber: string = "";
     public weight: number = 0;
     public height: number = 0;
-    public bmi: number = 0;
+    private bmi: number = 0;
 
     public checkWeightAndHeight(): void {
         if (this.weight > 0 && this.height > 0) {
