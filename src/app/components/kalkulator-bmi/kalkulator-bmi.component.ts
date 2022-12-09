@@ -13,20 +13,20 @@ export class KalkulatorBmiComponent {
     public height: number = 0;
     public bmi: number = 0;
 
-    public checkWeightAndHeight(): any {
+    public checkWeightAndHeight(): void {
         if (this.weight > 0 && this.height > 0) {
             this.calculateBMI();
         }
     }
 
-    public calculateBMI(): any {
+    public calculateBMI(): void {
         this.showResults = true;
         this.bmi = (this.weight / (this.height * this.height))*10000;
         this.resultNumber = this.bmi.toFixed(2);
         this.setBMIDescription();
     }
 
-    public setBMIDescription(): any {
+    public setBMIDescription(): void {
         if (this.bmi < 16) {
             this.resultText = "Wygłodzenie";
         } else if (this.bmi < 17) {
