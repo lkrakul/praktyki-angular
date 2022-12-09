@@ -1,0 +1,40 @@
+<div class="content" id="pageConverter">
+    <h2>Konwerter walut</h2>
+    <div class="box">
+        <div class="amountValue">
+            Kwota:
+            <br> <input type="number"  [(ngModel)]="amountMoney" (ngModelChange)="convertCurrency()">
+        </div>
+        <div class="fromCurrency">
+            Mam:
+            <br>
+            <select id="selectFromValue" [(ngModel)]="fromCurrency" (change)="convertCurrency()">
+                <option value="PLN">PLN - Złoty</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="USD">USD - Dolar amerykański</option>
+                <option value="GBP">GBP - Funt Brytyjski</option>
+                <option value="CHF">CHF - Frank szwajcarski</option>
+                <option value="BTC">BTC - Bitcoin</option>
+            </select>
+        </div>
+        <div class="sectionWithImg">
+            <br><img src="assets\images\convertButton.png" class="imgButton">
+        </div>
+        <div class="toCurrency">
+            Chcę otrzymać:
+            <br>
+            <select id="selectToValue" [(ngModel)]="toCurrency" (change)="convertCurrency()">
+                <option value="PLN">PLN - Złoty</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="USD">USD - Dolar amerykański</option>
+                <option value="GBP">GBP - Funt Brytyjski</option>
+                <option value="CHF">CHF - Frank szwajcarski</option>
+                <option value="BTC">BTC - Bitcoin</option>
+            </select>
+        </div>
+        <div class="resultView">
+            <h2 id="result">{{result}}</h2>
+            <h4 id="exchangeRate">{{exchangeRate}}</h4>
+        </div>
+    </div>
+</div>
